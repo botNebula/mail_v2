@@ -7,7 +7,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '1/15 * * * *'   # At every 2 min
+    - cron: '1/3 * * * *'   # At every 2 min
 
 jobs:
   build:
@@ -30,6 +30,7 @@ jobs:
       - name: execute py script # run main.py
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
+          PASSWORD: ${{ secrets.PASSWORD }}
         run: python main.py
           
       - name: commit files
