@@ -1,6 +1,5 @@
 name: run main.py
 
-
 permissions:
   pull-requests: write
   issues: write
