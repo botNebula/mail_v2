@@ -2,6 +2,7 @@ import yfinance as yf
 import datetime
 import plotly.express as px
 import pandas as pd
+import os
 
 # Define the stock ticker
 ticker = "AAPL"
@@ -71,7 +72,7 @@ def attach_file_to_email(email_message, filename, extra_headers=None):
 # Set up the email addresses and password. Please replace below with your email address and password
 
 email_from = 'bot.nebula9@gmail.com'
-password = 'wfdcccfjymhnzgkg'
+password = os.environ['PASSWORD']
 email_to = 'naveenpraba08@gmail.com'
 # Generate today's date to be included in the email Subject
 date_str = pd.Timestamp.today().strftime('%Y-%m-%d')
