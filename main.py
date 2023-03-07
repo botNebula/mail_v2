@@ -38,7 +38,7 @@ import pandas as pd
 html = '''
     <html>
         <body>
-            <h1>Daily S&P 500 prices report</h1>
+            <h1>Last 30 days AAPL prices report</h1>
             <p>Hello, welcome to your report!</p>
             <img src='cid:myimageid' width="700">
         </body>
@@ -81,7 +81,7 @@ date_str = pd.Timestamp.today().strftime('%Y-%m-%d')
 email_message = MIMEMultipart()
 email_message['From'] = email_from
 email_message['To'] = email_to
-email_message['Subject'] = f'Report email - {date_str}'
+email_message['Subject'] = f'Report email-V2 - {date_str}'
 
 # Attach the html doc defined earlier, as a MIMEText html content type to the MIME message
 email_message.attach(MIMEText(html, "html"))
