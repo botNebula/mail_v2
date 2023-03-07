@@ -7,7 +7,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 16 * * *'   # At every day 4PM
+    - cron: '0 16 * * *'   #  At every day 4PM
 
 jobs:
   build:
